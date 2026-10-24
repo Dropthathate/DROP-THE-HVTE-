@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DropTheHate™ — It's Δ MindstΔte</title>
+<meta name="description" content="DropTheHate™ by Nate. Words people have thought but never heard, and the long-sleeve that says it.">
+<meta property="og:title" content="DropTheHate™">
+<meta property="og:description" content="It's Δ MindstΔte. Drop the hate. Pick up your life.">
+<meta property="og:image" content="/assets/tee-back.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#000;--paper:#fff;--teal:#14bdbd;--silver:#b5b5b5;--dim:#8a8a8a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font:400 1.05rem/1.6 Inter,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;max-width:1100px;margin:0 auto}
+.mark{font:1.6rem/1 'Bebas Neue',sans-serif;letter-spacing:.04em}
+.mark b{color:var(--teal);font-weight:400}
+header a.shop{border:1px solid var(--silver);padding:.45rem 1.1rem;text-decoration:none;font-weight:600;font-size:.95rem}
+header a.shop:hover{background:var(--teal);border-color:var(--teal);color:#000}
+
+/* hero: the one memorable moment — thoughts appear line by line, slogan lands last */
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:3rem 0 4rem}
+.thoughts{font:italic 500 clamp(1.5rem,4.2vw,2.8rem)/1.25 'Cormorant Garamond',serif;color:var(--silver);max-width:20ch}
+.thoughts span{display:block;opacity:0;animation:in .9s forwards}
+.thoughts span:nth-child(1){animation-delay:.3s}
+.thoughts span:nth-child(2){animation-delay:1.6s}
+.thoughts span:nth-child(3){animation-delay:2.9s}
+.slogan{margin-top:1.5rem;font:clamp(3.4rem,13vw,9.5rem)/.9 'Bebas Neue',sans-serif;letter-spacing:.01em;opacity:0;animation:in 1s 4.4s forwards}
+.slogan em{font-style:normal;color:var(--teal)}
+.slogan sup{font-size:.2em;vertical-align:top;color:var(--silver)}
+.tag{margin-top:1.25rem;font:italic 500 1.4rem 'Cormorant Garamond',serif;color:var(--silver);opacity:0;animation:in 1s 5.2s forwards}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.thoughts span,.slogan,.tag{animation:none;opacity:1}}
+
+.product{background:var(--paper);color:#111;padding:4rem 0}
+.product .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.product img{width:100%;height:auto;display:block}
+.product h2{font:clamp(2.4rem,6vw,4rem)/.95 'Bebas Neue',sans-serif}
+.product p{margin:1rem 0 1.5rem;max-width:42ch;color:#333}
+.thumbs{display:flex;gap:.75rem;margin-top:1.5rem}
+.thumbs img{width:30%;border:1px solid #ddd}
+.btn{display:inline-block;background:#000;color:#fff;padding:.9rem 1.8rem;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--teal);color:#000}
+.fine{margin-top:.8rem;font-size:.9rem;color:#555}
+
+.words{padding:5rem 0}
+.words h2{font:clamp(2rem,5vw,3.2rem)/1 'Bebas Neue',sans-serif;margin-bottom:2rem}
+.words blockquote{font:italic 500 clamp(1.4rem,3vw,2rem)/1.35 'Cormorant Garamond',serif;padding:1.4rem 0;border-top:1px solid #222;max-width:34ch}
+.words blockquote:last-child{border-bottom:1px solid #222}
+.words blockquote b{font:400 1em 'Bebas Neue',sans-serif;font-style:normal;letter-spacing:.04em;color:var(--teal)}
+
+.join{padding:4rem 0 5rem;background:#0b0b0b}
+.join h2{font:clamp(2rem,5vw,3.2rem)/1 'Bebas Neue',sans-serif}
+.join p{margin:.8rem 0 1.5rem;color:var(--silver);max-width:44ch}
+form{display:flex;gap:.6rem;flex-wrap:wrap;max-width:520px}
+input{flex:1 1 240px;padding:.9rem 1rem;background:#000;border:1px solid var(--silver);color:#fff;font:inherit}
+button{padding:.9rem 1.6rem;background:var(--teal);border:0;font:600 1rem Inter,sans-serif;cursor:pointer}
+footer{padding:2rem 1.5rem;text-align:center;color:var(--dim);font-size:.9rem}
+@media(max-width:760px){.product .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">DropTheHate<b>™</b></div>
+  <a class="shop" href="#SHOP_URL" id="shopTop">Shop the long-sleeve</a>
+</header>
+
+<main>
+<section class="hero wrap">
+  <div class="thoughts">
+    <span>Some people need you small to feel tall.</span>
+    <span>They called it ambition when it was theirs.</span>
+    <span>You're still carrying what they said.</span>
+  </div>
+  <h1 class="slogan">Drop <em>the</em> Hate<sup>™</sup></h1>
+  <p class="tag">Pick up your life.</p>
+</section>
+
+<section class="product" id="tee">
+  <div class="wrap grid">
+    <img src="assets/tee-back.png" alt="Black long-sleeve shirt, back view: white dove above teal Drop The HVTE print with the line It's Δ MindstΔte">
+    <div>
+      <h2>It's Δ MindstΔte</h2>
+      <p>Garment-dyed heavyweight long-sleeve in black. The dove is the release. The triangle at the collar is the awareness. The Δ is the change.</p>
+      <a class="btn" href="#SHOP_URL" id="shopMain">Get yours</a>
+      <p class="fine">Back print: dove and DROP THE HVTE™. Small eye mark at the neck.</p>
+      <div class="thumbs">
+        <img src="assets/tee-front.png" alt="Folded black long-sleeve with the dove print" loading="lazy">
+        <img src="assets/tee-detail.png" alt="Close-up of the eye triangle mark and dove wings" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="words wrap">
+  <h2>Words you've thought. Never heard.</h2>
+  <blockquote>Hate is a tax people pay for not becoming who they could've been. Don't co-sign their debt.</blockquote>
+  <blockquote>The day I stopped explaining myself, my life got quiet and my work got loud. <b>Drop the hate.</b></blockquote>
+  <blockquote>Hate is a wifi signal. It's everywhere. You don't have to connect.</blockquote>
+  <blockquote>Bay Area bred. Puerto Rican blood. Black by birth. Unbothered by design. <b>Drop the hate.</b></blockquote>
+</section>
+
+<section class="join" id="join">
+  <div class="wrap">
+    <h2>Get the next drop first</h2>
+    <p>New words, new pieces, early access. No spam.</p>
+    <form action="mailto:drophategrx@gmail.com?subject=DropTheHate%20signup" method="post" enctype="text/plain">
+      <input type="email" name="email" placeholder="Your email" aria-label="Email address" required>
+      <button type="submit">Join</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>© DropTheHate™ — Pick up your life.</footer>
+<script>
+// Set your store link once, here.
+var SHOP_URL = "#tee";
+document.querySelectorAll('a[href="#SHOP_URL"]').forEach(function(a){a.href=SHOP_URL});
+</script>
+</body>
+</html>
